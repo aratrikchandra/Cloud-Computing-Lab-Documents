@@ -24,12 +24,12 @@
           "ownerIdentity": {
             "principalId": "EXAMPLE"
           },
-          "arn": "arn:aws:s3:::project-photos-lab5"
+          "arn": "arn:aws:s3:::<Your Bucket Name>"
         },
         "object": {
           "key": "<Your Image Name>",
           "size": 1024,
-          "eTag": "0123456789abcdef0123456789abcdef",
+          "eTag": "<eTag of your image>",
           "sequencer": "0A1B2C3D4E5F678901"
         }
       }
