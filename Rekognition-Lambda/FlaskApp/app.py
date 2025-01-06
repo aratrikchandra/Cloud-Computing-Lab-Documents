@@ -61,7 +61,7 @@ def upload_file():
                 Key=unique_filename
             )
 
-            flash('File uploaded successfully. Please wait a few moments for processing.', 'success')
+            flash(f'File uploaded successfully.Image ID: {unique_filename}', 'success')
 
             # Set session variable to indicate successful upload
             session['uploaded_image'] = unique_filename
