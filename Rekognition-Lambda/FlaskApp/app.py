@@ -61,7 +61,8 @@ def upload_file():
                 Key=unique_filename
             )
 
-            flash(f'File uploaded successfully.Image ID: {unique_filename}', 'success')
+            # Attach the image ID to the response and flash message
+            flash(f'File uploaded successfully. Image ID: {unique_filename}', 'success')
 
             # Set session variable to indicate successful upload
             session['uploaded_image'] = unique_filename
@@ -75,7 +76,7 @@ def upload_file():
             if os.path.exists(resized_file_path):
                 os.remove(resized_file_path)
 
-        return redirect(request.url)
+        return redirect(url_for('upload_file', image_id=unique_filename))  # Pass image ID in redirect
 
     return render_template('upload.html', allowed_extensions=ALLOWED_EXTENSIONS, max_size_mb=MAX_IMAGE_SIZE/(1024*1024))
 
