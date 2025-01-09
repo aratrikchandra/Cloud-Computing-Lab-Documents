@@ -4,7 +4,7 @@ import logging
 app = Flask(__name__)
 
 # Set up logging
-logging.basicConfig(filename='app.log',level=logging.INFO)
+logging.basicConfig(filename='/var/log/my_flask_app_bar.log',level=logging.INFO)
 
 @app.route('/')
 def index():
